@@ -1,0 +1,4 @@
+<configuration>
+	<include name="/usr/dataappl/common/base.config.xml" location="file"/>
+</configuration>
+

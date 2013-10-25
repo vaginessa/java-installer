@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>ARQ-SDK</title>
+<style type="text/css">
+LI {
+	font-family: monospace;
+}
+
+LI.important {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+	<h1 style="text-align: center">ARQ-SDK 1.0-RC2 Installed!</h1>
+	<h2>ChangeLog</h2>
+	<h3>Version 1.0-RC2</h3>
+	<ul>
+		<li class="important">(Fix) Se estaba eliminando por error la
+			carpeta C:\usr\dataappl que ten&iacute;a ficheros de usuario</li>
+		<li class="important">(Fix) La biblioteca "Generali" del WAS
+			apuntaba a un path incorrecto después de mover la instalación a
+			C:\ARQ-SDK</li>
+		<li>(Fix) Log incrementado en 10MB para que guarde todo el
+			proceso de instalaci&oacute;n es un &uacute;nico fichero</li>
+	</ul>
+	<h3>Version 1.0-RC1</h3>
+	<ul>
+		<li class="important">(New) Modificado settings.xml +
+			settings_pruebas maven
+		<li class="important">(New) Paralelización instalación IBM IM +
+			descarga WAS para reducir tiempo de instalación</li>
+		<li>(New) Consola mejorada con WAIT cursor + linewrap + no
+			editable</li>
+		<li>(New) ChangeLog implementado (servira como control de version
+			instalada)</li>
+		<li>(Fix) El log de instalaci&oacute;n ahora se limita a 5MB + 1
+			fichero de backup para evitar un llenado de disco</li>
+		<li>(New) Refactoring clases de utilidad, ahora genéricas</li>
+		<li>(Fix) IllegalArgumentException en consola</li>
+		<li>(Fix) Los botones de install/uninstall no se deshabilitaban
+			correctamente</li>
+		<li>(Fix) El JDK no se instalaba después de hacer un "uninstall"
+			+ "install"</li>
+		<li>(Fix) El directorio ARQ-SDK/usuario se eliminaba antes de
+			desinstalar el IBM y WAS</li>
+	</ul>
+	<h3>Version 0.12</h3>
+	<ul>
+		<li class="important">(New) Se cambia el directorio de
+			instalación del ARQ-SDK del directorio "%HOMEPATH%" del usuario a
+			C:\ARQ-SDK</li>
+		<li class="important">(New) Desinstalación del WAS e IBM IM de
+			forma automática</li>
+		<li>(New) Se añade barra de progreso de instalación del IBM/WAS</li>
+		<li>(New) Nuevas trazas para ver el progreso del proceso</li>
+		<li>(New) Se mejora el Appender del SystemOut.</li>
+		<li>(Fix) Se corrije habilitación / deshabilitación de los
+			botones</li>
+	</ul>
+</body>
+</html>

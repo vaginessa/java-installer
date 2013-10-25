@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+jenkinsRebaseJobName=met-03-rebase
+jenkinsUrl=http\://10.232.225.42\:8080/jenkins/
+jiraRestBaseUrl=/rest/met-jira/latest/met-jira/
+jiraUsr=%JIRA_USR%
+svnUrl=http\://10.232.225.45/svnmet/
+svnUsr=%SVN_USR%

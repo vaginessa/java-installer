@@ -1,0 +1,40 @@
+<configuration>
+	<section name="AccessControlFactory">
+		<entry key="className" value="es.generali.arq.framework.security.HighAccessControl"/>
+	</section> 
+	<section name="ControlAccesoModel">
+		<entry key="Entorno" value="Desarrollo"/>
+		<entry key="Motor" value="LDAP"/>
+		<entry key="LDAPCtxFactory" value="com.sun.jndi.ldap.LdapCtxFactory"/>
+		<entry key="LDAPUrl" value="ldap://ldp4va1.si.generali.es:389,ldap://ldp4va2.si.generali.es:389"/>
+		<entry key="ListaIPs" value="0.0.0.0"/>
+		<entry key="ControlaIPOrigen" value="false"/>
+		<entry key="LDAPUser" value="cn=aControlAcceso,ou=usuarios,ou=miscelanea"/>
+		<entry key="LDAPPassword" value="EWCSQUIUIWYUWX"/>
+		<entry key="LDAPTimeout" value="8000"/>
+		<entry key="BaseGrupos" value="ou=Operaciones,ou=Control,o=generali,c=es"/>
+		<entry key="BaseUsuarios" value="o=generali,c=es"/>
+		<entry key="BaseAplicaciones" value="ou=Aplicaciones,ou=Control,o=generali,c=es"/>
+		<entry key="BaseOperaciones" value="ou=Operaciones,ou=Control,o=generali,c=es"/>
+		<entry key="BaseGestionOperaciones" value="ou=GestionOperaciones,ou=Control,o=generali,c=es"/>
+		<entry key="PrefijoGestionOperaciones" value="GO-"/>
+		<entry key="BaseAmbitos" value="ou=Ambitos,ou=Control,o=generali,c=es"/>
+		<entry key="DirectorioAuditoria" value="/var/log/WebSphere/"/>
+		<entry key="Debug" value="true"/>
+		<entry key="Cache" value="true"/>
+		<entry key="GruposComoAlias" value="true"/>
+		<entry key="ActivaAM" value="false"/>
+		<entry key="BaseAMAuditoria" value="/var/log/WebSphere/"/>
+		<entry key="ParametrosCifrados" value="false"/>
+		<entry key="FuerzaAuditoria" value="false"/>
+	</section>
+	<section name="LDAP_BEX">
+		<entry key="DN_usuario" value="cn=medldap,ou=Usuarios,ou=miscelanea" />
+		<entry key="ldapAdmin" value="ldap://ldp4v4.si.generali.es:389" />
+		<entry key="RAIZ" value= "ou=BibExp,ou=Servicios,o=Generali,c=ES" />
+ 		<entry key="mSearchPeople" value="o=Generali,c=ES"/>
+		<entry key="password" value="M2wzZDRw=" />
+		<entry key="mSearchPeople" value = "o=Generali,c=ES" />
+ 	</section>		
+</configuration>
+
