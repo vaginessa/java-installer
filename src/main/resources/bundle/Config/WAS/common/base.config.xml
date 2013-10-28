@@ -1,6 +1,0 @@
-<configuration>
-	<include name="/usr/dataappl/common/sts.config.xml" location="file"/>
-	<include name="/usr/dataappl/common/arq.config.xml" location="file"/>
-	<include name="/usr/dataappl/common/seg.config.xml" location="file"/>
-</configuration>
-

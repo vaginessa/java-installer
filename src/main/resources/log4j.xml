@@ -4,34 +4,36 @@
 	xmlns:log4j='http://jakarta.apache.org/log4j/'>
 
 	<appender name="fileAppender"
-		class="es.generali.arq_sdk.util.log4j.MultipleLayoutRedirectAppender$MultipleLayoutRollingFileAppender">
+		class="org.andresoviedo.apps.installer.util.log4j.MultipleLayoutRedirectAppender$MultipleLayoutRollingFileAppender">
 		<param name="append" value="true" />
 		<param name="MaxFileSize" value="10MB" />
 		<param name="MaxBackupIndex" value="1" />
-		<param name="file" value="${user.home}/Escritorio/GENERALI-ARQ-SDK-Setup.log" />
+		<param name="file" value="${user.home}/install.log" />
 	</appender>
 
 	<appender name="REDIRECTLOGGER-fileAppender-1"
-		class="es.generali.arq_sdk.util.log4j.MultipleLayoutRedirectAppender">
+		class="org.andresoviedo.apps.installer.util.log4j.MultipleLayoutRedirectAppender">
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%d [%-10t] [%-20C{1}] [%-5p] %m%n" />
 		</layout>
 	</appender>
 
 	<appender name="REDIRECTLOGGER-fileAppender-2"
-		class="es.generali.arq_sdk.util.log4j.MultipleLayoutRedirectAppender">
+		class="org.andresoviedo.apps.installer.util.log4j.MultipleLayoutRedirectAppender">
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%m" />
 		</layout>
 	</appender>
 
-	<appender name="GUI_ConsoleAppender" class="es.generali.arq_sdk.services.LoggerAppender">
+	<appender name="GUI_ConsoleAppender"
+		class="org.andresoviedo.apps.installer.services.LoggerAppender">
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%m%n" />
 		</layout>
 	</appender>
 
-	<appender name="GUI_ConsoleAppender2" class="es.generali.arq_sdk.services.LoggerAppender">
+	<appender name="GUI_ConsoleAppender2"
+		class="org.andresoviedo.apps.installer.services.LoggerAppender">
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%m" />
 		</layout>
@@ -41,7 +43,8 @@
 		<appender-ref ref="fileAppender" />
 	</logger>
 
-	<logger name="es.generali.arq_sdk.util.io.IOHelper$StreamGobbler"
+	<logger
+		name="org.andresoviedo.apps.installer.util.io.IOHelper$StreamGobbler"
 		additivity="false">
 		<level value="DEBUG" />
 		<appender-ref ref="GUI_ConsoleAppender2" />

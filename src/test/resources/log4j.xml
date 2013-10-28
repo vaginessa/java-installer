@@ -17,7 +17,7 @@
 		</layout>
 	</appender>
 
-	<logger name="es.generali.arq_sdk.util.io.IOHelper$StreamGobbler"
+	<logger name="org.andresoviedo.apps.installer.util.io.IOHelper$StreamGobbler"
 		additivity="false">
 		<level value="DEBUG" />
 		<appender-ref ref="console2" />

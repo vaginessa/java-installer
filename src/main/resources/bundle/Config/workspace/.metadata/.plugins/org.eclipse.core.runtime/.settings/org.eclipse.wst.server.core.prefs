@@ -1,3 +1,0 @@
-eclipse.preferences.version=1
-module-start-timeout=300000
-runtimes=<?xml version\="1.0" encoding\="UTF-8"?><runtimes>\r\n  <runtime id\="Web Preview Server Runtime" id-set\="true" location\="C\:/ARQ-SDK/%USERNAME%/eclipse_workspace/.metadata/.plugins/com.ibm.etools.wdt.server.core/tmp0" name\="Web Preview Server Runtime" runtime-type-id\="com.ibm.etools.wdt.server.runtime.10" timestamp\="0"/>\r\n  <runtime current_SDK_Id\="1.6_32" id\="WebSphere Application Server v8.5" location\="C\:/ARQ-SDK/%USERNAME%/IBM/WebSphere/AppServer" name\="WebSphere Application Server v8.5" runtime-type-id\="com.ibm.ws.ast.st.runtime.v85" timestamp\="0"/>\r\n</runtimes>

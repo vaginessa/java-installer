@@ -2,11 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>es.generali.arq_sdk</groupId>
-	<artifactId>installer</artifactId>
+	<groupId>org.andresoviedo.apps</groupId>
+	<artifactId>java-installer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>arq_sdk_installer</name>
-	<description>arq_sdk_installer</description>
+	<name>installer</name>
 
 	<build>
 
@@ -69,6 +68,12 @@
 			<version>4.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.andresoviedo</groupId>
+			<artifactId>java-utilities</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
+	<description>java installer for executing commands with console</description>
 </project>
