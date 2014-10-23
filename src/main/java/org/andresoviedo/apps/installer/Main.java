@@ -2,9 +2,12 @@ package org.andresoviedo.apps.installer;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.Map;
 import java.util.Properties;
+
+import javax.swing.JOptionPane;
 
 import org.andresoviedo.apps.installer.controller.Controller;
 import org.andresoviedo.apps.installer.model.Model;
@@ -14,8 +17,6 @@ import org.apache.commons.logging.LogFactory;
 
 /**
  * Application launcher.
- * 
- * @author generali
  * 
  */
 public class Main {
@@ -37,7 +38,7 @@ public class Main {
 			logger.info("Starting application...");
 
 			logger.info("Loading application configuration...");
-			File configurationFile = new File("install.properties");
+			File configurationFile = new File("Setup", "install.ini");
 			Properties properties = new Properties();
 			if (configurationFile.exists()) {
 				FileInputStream inStream = new FileInputStream(
@@ -47,11 +48,23 @@ public class Main {
 			}
 			Main.properties = Collections.unmodifiableMap(properties);
 
+			if (Boolean.parseBoolean((String) properties
+					.get("installer.disabled"))) {
+				if (!Arrays.asList(
+						((String) properties.get("installer.testers"))
+								.split(",")).contains(
+						System.getProperty("user.name").toLowerCase())) {
+					JOptionPane
+							.showMessageDialog(
+									null,
+									"Realizando tareas de mantenimiento.\nPor favor inténtelo de nuevo en unos minutos.");
+					System.exit(0);
+				}
+			}
+
 			// Init MVC Components
 			logger.info("Initializing application model...");
 			model = new Model();
-			// fileSystemMonitorService = new FileSystemMonitorService(
-			// fileSystemModel);
 
 			logger.info("Initializing application Controller...");
 			controller = new Controller(model);

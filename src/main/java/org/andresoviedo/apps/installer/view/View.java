@@ -90,7 +90,7 @@ public class View extends JFrame implements Observer, EventListener {
 									JOptionPane.WARNING_MESSAGE) == JOptionPane.CANCEL_OPTION) {
 						return;
 					}
-					// model.killProcesses();
+//					model.killProcesses();
 				}
 				logger.debug("Exiting application...");
 				Main.exit();
@@ -171,7 +171,7 @@ public class View extends JFrame implements Observer, EventListener {
 
 		// consolePanel.add(new JLabel("Consola"));
 		scrollableTextArea = new ScrollableTextArea(model);
-		scrollableTextArea.setPreferredSize(new Dimension(640, 200));
+		scrollableTextArea.setPreferredSize(new Dimension(640, 300));
 		consolePanel.add(scrollableTextArea);
 		getContentPane().add(consolePanel);
 	}
@@ -200,7 +200,7 @@ public class View extends JFrame implements Observer, EventListener {
 	public void installDelayed() {
 		new TimeoutOptionPane(this, "Starting install in {0} seconds...",
 				WINDOW_TITLE, JOptionPane.INFORMATION_MESSAGE,
-				JOptionPane.CANCEL_OPTION, 1000, 3, new CallBack() {
+				JOptionPane.CANCEL_OPTION, 1000, 30, new CallBack() {
 					@Override
 					public void process(int result) {
 						if (result == JOptionPane.CANCEL_OPTION
@@ -238,7 +238,7 @@ public class View extends JFrame implements Observer, EventListener {
 	private boolean isExecutionAllowed() {
 		// return !model.areProcessesRunning()
 		// && (currentWorker == null || currentWorker.isDone());
-		return currentWorker == null || currentWorker.isDone();
+		return true;
 	}
 
 	@Override
@@ -302,7 +302,7 @@ public class View extends JFrame implements Observer, EventListener {
 		void refreshStatus() {
 			// Aqui se puede cambiar el label Reinstall/Install según estado de
 			// la máquina
-			putValue(Action.NAME, View.this.isExecutionAllowed() ? "Install"
+			putValue(Action.NAME, controller.isAnythingInstalled() ? "Install"
 					: "Install");
 			setEnabled(isExecutionAllowed());
 		}

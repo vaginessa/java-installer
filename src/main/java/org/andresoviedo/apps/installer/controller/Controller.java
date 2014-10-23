@@ -1,13 +1,11 @@
 package org.andresoviedo.apps.installer.controller;
 
-import java.io.File;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.Future;
 
 import org.andresoviedo.apps.installer.model.Model;
-import org.andresoviedo.util.desktop.DesktopHelper;
+import org.andresoviedo.apps.installer.tasks.Task1;
+import org.andresoviedo.apps.installer.tasks.Task2;
+import org.andresoviedo.util.tasks.DependantTasksExecutor;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -23,58 +21,36 @@ public class Controller {
 
 	public int installAll() throws Exception {
 		logger.info("Installing product...");
-		ExecutorService executor = null;
 		try {
-			executor = Executors.newFixedThreadPool(2);
-			FutureTask<Integer> ibmStep = new FutureTask<Integer>(
-					new Callable<Integer>() {
-						@Override
-						public Integer call() {
-							logger.info("Starting installation step 1...");
-							logger.info("Installation step 1 ended");
-							return 0;
-						}
-					});
+			DependantTasksExecutor executor = new DependantTasksExecutor(10);
 
-			FutureTask<Integer> eclipseStep = new FutureTask<Integer>(
-					new Callable<Integer>() {
-						@Override
-						public Integer call() {
-							logger.info("Starting installation step 2...");
-							logger.info("Installation step 2 ended");
-							return 0;
-						}
-					});
+			Future<Integer> task1 = executor.submit(new Task1());
+			Future<Integer> task2 = executor.submit(new Task2());
 
-			executor.execute(ibmStep);
-			executor.execute(eclipseStep);
-
-			while (!ibmStep.isDone() || !eclipseStep.isDone()) {
-				Thread.sleep(1000);
-			}
-
-			File changeLog = model.installChangeLog();
-			logger.debug("Opening ChangeLog...");
-			DesktopHelper.openWebpage(changeLog.toURI());
+			executor.shutdown();
 
 			logger.info("ARQ-SDK installed");
-			return ibmStep.get() + eclipseStep.get();
+			return task1.get() + task2.get();
 
 		} catch (Exception ex) {
 			logger.fatal(ex.getMessage(), ex);
 			throw ex;
-		} finally {
-			if (executor != null) {
-				executor.shutdown();
-			}
 		}
+	}
+
+	public boolean isAnythingInstalled() {
+		// return model.isEclipseInstalled()
+		// || model.isEclipseWorkspaceInstalled()
+		// || model.isWasConfigInstalled();
+		// TODO: de momento asumismo que hay algo instalado
+		return true;
 	}
 
 	public int uninstallAll() throws Exception {
 		logger.info("Uninstalling ARQ-SDK...");
-		
+
 		model.uninstallProduct();
-		
+
 		logger.info("ARQ-SDK uninstalled");
 
 		return 0;

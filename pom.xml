@@ -30,7 +30,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>es.generali.arq_sdk.Main</mainClass>
+							<mainClass>org.andresoviedo.apps.installer.Main</mainClass>
 							<addClasspath>true</addClasspath>
 							<classpathPrefix>lib/</classpathPrefix>
 						</manifest>
