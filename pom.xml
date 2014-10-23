@@ -6,6 +6,7 @@
 	<artifactId>java-installer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>installer</name>
+	<description>java installer for executing commands with console</description>
 
 	<build>
 
@@ -70,5 +71,4 @@
 		</dependency>
 	</dependencies>
 
-	<description>java installer for executing commands with console</description>
 </project>
