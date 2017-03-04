@@ -12,6 +12,7 @@ public class Task2 implements Callable<Integer> {
 	@Override
 	public Integer call() throws Exception {
 		logger.info("Starting installation step 2...");
+		Thread.sleep((long) (Math.random() * 1000));
 		logger.info("Installation step 2 ended");
 		return 0;
 	}

@@ -4,7 +4,7 @@
 
 	<groupId>org.andresoviedo.apps</groupId>
 	<artifactId>java-installer</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>installer</name>
 	<description>java installer for executing commands with console</description>
 
@@ -67,7 +67,7 @@
 		<dependency>
 			<groupId>org.andresoviedo</groupId>
 			<artifactId>java-utilities</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.0</version>
 		</dependency>
 	</dependencies>
 

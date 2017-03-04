@@ -24,13 +24,14 @@ public class Controller {
 		try {
 			DependantTasksExecutor executor = new DependantTasksExecutor(10);
 
-			Future<Integer> task1 = executor.submit(new Task1());
-			Future<Integer> task2 = executor.submit(new Task2());
+			Future<Integer> task1 = executor.submit(new Task1(), "1", null);
+			Future<Integer> task2 = executor.submit(new Task2(), "2", new String[] { "1" });
 
 			executor.shutdown();
 
-			logger.info("ARQ-SDK installed");
-			return task1.get() + task2.get();
+			int status = task1.get() + task2.get();
+			logger.info("ARQ-SDK installed. Status: " + status);
+			return status;
 
 		} catch (Exception ex) {
 			logger.fatal(ex.getMessage(), ex);

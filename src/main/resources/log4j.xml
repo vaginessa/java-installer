@@ -4,7 +4,7 @@
 	xmlns:log4j='http://jakarta.apache.org/log4j/'>
 
 	<appender name="fileAppender"
-		class="org.andresoviedo.apps.installer.util.log4j.MultipleLayoutRedirectAppender$MultipleLayoutRollingFileAppender">
+		class="org.andresoviedo.util.log4j.MultipleLayoutRedirectAppender$MultipleLayoutRollingFileAppender">
 		<param name="append" value="true" />
 		<param name="MaxFileSize" value="10MB" />
 		<param name="MaxBackupIndex" value="1" />
@@ -12,14 +12,14 @@
 	</appender>
 
 	<appender name="REDIRECTLOGGER-fileAppender-1"
-		class="org.andresoviedo.apps.installer.util.log4j.MultipleLayoutRedirectAppender">
+		class="org.andresoviedo.util.log4j.MultipleLayoutRedirectAppender">
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%d [%-10t] [%-20C{1}] [%-5p] %m%n" />
 		</layout>
 	</appender>
 
 	<appender name="REDIRECTLOGGER-fileAppender-2"
-		class="org.andresoviedo.apps.installer.util.log4j.MultipleLayoutRedirectAppender">
+		class="org.andresoviedo.util.log4j.MultipleLayoutRedirectAppender">
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%m" />
 		</layout>
@@ -44,7 +44,7 @@
 	</logger>
 
 	<logger
-		name="org.andresoviedo.apps.installer.util.io.IOHelper$StreamGobbler"
+		name="org.andresoviedo.util.io.IOHelper$StreamGobbler"
 		additivity="false">
 		<level value="DEBUG" />
 		<appender-ref ref="GUI_ConsoleAppender2" />

@@ -70,7 +70,7 @@ public class View extends JFrame implements Observer, EventListener {
 		// addVGap();
 		initConsole();
 		// addVGap();
-		// initComponents();
+		initComponents();
 		pack();
 	}
 
@@ -177,7 +177,7 @@ public class View extends JFrame implements Observer, EventListener {
 	}
 
 	// /**
-	// * Diálogo con timeout que al finalizar arranca la instalación desatendida
+	// * Diï¿½logo con timeout que al finalizar arranca la instalaciï¿½n desatendida
 	// */
 	// private void initTimeout() {
 	// new TimeoutOptionPane(this, "Starting install in {0} seconds...",
@@ -263,6 +263,7 @@ public class View extends JFrame implements Observer, EventListener {
 	class InstallAllAction extends AbstractAction {
 
 		public InstallAllAction() {
+			super("Install");
 		}
 
 		@Override
@@ -300,8 +301,8 @@ public class View extends JFrame implements Observer, EventListener {
 		}
 
 		void refreshStatus() {
-			// Aqui se puede cambiar el label Reinstall/Install según estado de
-			// la máquina
+			// Aqui se puede cambiar el label Reinstall/Install segï¿½n estado de
+			// la mï¿½quina
 			putValue(Action.NAME, controller.isAnythingInstalled() ? "Install"
 					: "Install");
 			setEnabled(isExecutionAllowed());
