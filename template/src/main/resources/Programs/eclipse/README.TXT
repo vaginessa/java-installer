@@ -1,0 +1,1 @@
+Eclipse zipped to parts (200MB recommended)

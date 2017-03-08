@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="2" auto-publish-time="1" configMode="1" hostname="127.0.0.1" id="defaultServer0" id-set="true" name="Web Preview Server" runtime-id="Web Preview Server Runtime" server-type="com.ibm.etools.wdt.server.serverType" server-type-id="com.ibm.etools.wdt.server.serverType" serverName="defaultServer0" start-timeout="30" stop-timeout="15" timestamp="0"/>
+  <server baseServerName="server1" hostname="localhost" id="WebSphere Application Server v8.5 at localhost" isAutoConnectionTypeEnabled="true" isHotMethodReplace="true" isOptimiziedForDevelopmentEnv="true" isQuickBatchServerStart="true" isRunServerWithWorkspaceResources="true" isTerminateServerOnExit="true" isUTCEnabled="true" isZeroBinaryEnabled="true" name="WebSphere Application Server v8.5 at localhost" publish-trigger-type="publish-trigger-type-global" runtime-id="WebSphere Application Server v8.5" server-type="com.ibm.ws.ast.st.v85.server.base" server-type-id="com.ibm.ws.ast.st.v85.server.base" serverConnectionType="IPC" serverIPCConnectorPortNum="9633" serverOrbBootstrapPortNum="2809" serverSoapConnectorPortNum="8880" start-timeout="3000" stop-timeout="1200" timestamp="27" webSphereProfileName="AppSrv01">
+    <list key="connectorTypeList" value0="IPC" value1="JSR160RMI" value2="RMI" value3="SOAP"/>
+    <list key="modules"/>
+  </server>
+  <server baseServerName="server1" hostname="localhost" id="WebSphere Application Server v8.5 at localhost (framework2 jsf/spring)" isAutoConnectionTypeEnabled="true" isHotMethodReplace="true" isOptimiziedForDevelopmentEnv="true" isQuickBatchServerStart="true" isRunServerWithWorkspaceResources="true" isTerminateServerOnExit="true" isUTCEnabled="true" isZeroBinaryEnabled="true" name="WebSphere Application Server v8.5 at localhost (framework2 jsf/spring)" publish-trigger-type="publish-trigger-type-global" runtime-id="WebSphere Application Server v8.5" server-type="com.ibm.ws.ast.st.v85.server.base" server-type-id="com.ibm.ws.ast.st.v85.server.base" serverConnectionType="IPC" serverIPCConnectorPortNum="9634" serverOrbBootstrapPortNum="2810" serverSoapConnectorPortNum="8881" start-timeout="3000" stop-timeout="1200" timestamp="49" webSphereProfileName="AppSrv02">
+    <list key="connectorTypeList" value0="IPC" value1="JSR160RMI" value2="RMI" value3="SOAP"/>
+    <list key="modules"/>
+  </server>
+</servers>

@@ -1,0 +1,2 @@
+eclipse.preferences.version=1
+ignore_files=.classpath\ntrue\n.project\ntrue\n.settings*\ntrue\ntarget\ntrue\ntarget/*\ntrue\n.apt_generated/*\ntrue\n*/META-INF/MANIFEST.MF\ntrue\n*/WEB-INF/classes\ntrue\n*/META-INF/maven\ntrue\n*/src/main/application/META-INF/application.xml\ntrue\n*/src/main/webapp/WEB-INF/wsdl/*.wsdl\ntrue.apt_generated\ntrue\n*/WEB-INF/classes/*\ntrue
