@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+<extension point="org.eclipse.ui.startup">
+   <startup
+         class="org.andresoviedo.eclipse.sdkplugin.Activator">
+   </startup>
+   </extension>
+	<extension point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.andresoviedo.eclipse.sdkplugin.preferences.PreferencePage"
+            id="org.andresoviedo.eclipse.sdkplugin.preferences.PreferencePage"
+            name="SDK" category="SDK">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.andresoviedo.eclipse.sdkplugin.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+
+</plugin>

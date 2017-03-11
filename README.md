@@ -3,15 +3,15 @@ Java Installer
 
 ![badge](https://travis-ci.org/andresoviedo/java-installer.svg?branch=master)
 
-Java Installer & Uninstaller With GUI
+Java Installer & Uninstaller With GUI & eclipse integration
 
 This is a framework to automate PC setup. For example, you can use it to automate 
 the installation of a development environment ie. (eclipse, naven, jboss, etc)
 
 
-News 08/03/2017
+News 11/03/2017
 ===============
-* Uploaded template
+* Uploaded eclipse plugin
 
 
 TODO
@@ -24,7 +24,7 @@ Features
 ========
 * 100% java SE - no frameworks
 * GUI with console viewer
-* Multithreaded executor supporting execution of dependants tasks
+* Multithreaded installation
 
 
 Screenshots

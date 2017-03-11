@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SDK
+Bundle-SymbolicName: org.andresoviedo.eclipse.sdkplugin;singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: org.andresoviedo.eclipse.sdkplugin.Activator
+Bundle-Vendor: andresoviedo
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.e4.ui.di
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
